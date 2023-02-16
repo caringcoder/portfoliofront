@@ -1,6 +1,6 @@
 import React from 'react'
-import BtcFarm from '../assets/btcFarm.png'
-import Todo from '../assets/todo.png'
+// import BtcFarm from '../assets/btcFarm.png'
+// import Todo from '../assets/todo.png'
 
 
 function MyWork() {

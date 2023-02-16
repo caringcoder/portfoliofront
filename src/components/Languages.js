@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import React from 'react'
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import ReactJsLogo from '../assets/logo/ReactJs.png'
 import CSS3Logo from '../assets/logo/CSS3.png'

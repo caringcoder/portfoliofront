@@ -17,7 +17,24 @@ const iconsPath = [
         href: "https://www.instagram.com/anxious_me__/?igshid=YmMyMTA2M2Y%3D"
     }
 ]
-
+const navItems = [
+    {
+        name: 'Home',
+        href: "#"
+    },
+    {
+        name: 'About',
+        href: "#"
+    },
+    {
+        name: 'Services',
+        href: "#"
+    },
+    {
+        name: 'Contact',
+        href: "#"
+    },
+]
 
 function Navbar() {
     return (
@@ -30,18 +47,15 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarText">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Services</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
-                            </li>
+                            {
+                                navItems.map((element, index) => {
+                                    return (
+                                        <li className="nav-item" key={index}>
+                                            <a className="nav-link active" aria-current="page" href={element.href} >{element.name}</a>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                         <div>
                             <span className="navbar-text">
