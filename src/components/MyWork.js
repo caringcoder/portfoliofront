@@ -1,14 +1,14 @@
 import React from 'react'
-import BtcFarm from '../assets/btcfarm.png'
+import BtcFarm from '../assets/btcFarm.png'
 import Todo from '../assets/todo.png'
 
 
 function MyWork() {
     return (
         <>
-            <div className="container">
-                <h1 className='text-center'>What I've Made</h1>
-                <div id="carouselExampleDark" className="carousel carousel-dark slide h-50">
+            <div className="container mx-auto">
+                <h1 className='text-center m-2'>What I've Made</h1>
+                <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -16,21 +16,21 @@ function MyWork() {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-bs-interval="10000">
-                            <img src={BtcFarm} className="d-block w-100 h-50" alt="BtcFarm" />
+                            <img src={""} className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Some representative placeholder content for the first slide.</p>
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="2000">
-                            <img src={Todo} className="d-block w-100 h-50" alt="Todo" />
+                            <img src="..." className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Some representative placeholder content for the second slide.</p>
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img src={BtcFarm} className="d-block w-100 h-50" alt='BtcFarm' />
+                            <img src="..." className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
                                 <p>Some representative placeholder content for the third slide.</p>
@@ -47,6 +47,7 @@ function MyWork() {
                     </button>
                 </div>
             </div>
+
         </>
     )
 }
