@@ -1,6 +1,6 @@
 import React from 'react'
-// import BtcFarm from '../assets/btcFarm.png'
-// import Todo from '../assets/todo.png'
+import BtcFarm from '../assets/carouselImages/btcFarm.jpeg'
+import Todo from '../assets/carouselImages/todo.jpeg'
 
 
 function MyWork() {
@@ -16,21 +16,21 @@ function MyWork() {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-bs-interval="10000">
-                            <img src={""} className="d-block w-100" alt="..." width="800" height="400" />
+                            <img src={BtcFarm} className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Some representative placeholder content for the first slide.</p>
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="2000">
-                            <img src="..." className="d-block w-100" alt="..." width="800" height="400" />
+                            <img src={Todo} className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Some representative placeholder content for the second slide.</p>
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img src="..." className="d-block w-100" alt="..." width="800" height="400" />
+                            <img src={BtcFarm} className="d-block w-100" alt="..." width="800" height="400" />
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
                                 <p>Some representative placeholder content for the third slide.</p>

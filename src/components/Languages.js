@@ -61,7 +61,7 @@ function Languages() {
         <>
             <div className="container ">
                 <hr />
-                <h2 className='text-center m-4'>Languages I'm Comfortable With</h2>
+                <h2 className='text-center m-4'>Technologies I'm Comfortable With</h2>
 
                 <div className="container">
                     <CarouselProvider

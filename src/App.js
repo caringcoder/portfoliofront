@@ -1,3 +1,4 @@
+import Connect from './components/Connect';
 import HeroSection from './components/HeroSection';
 import Languages from './components/Languages';
 import MyWork from './components/MyWork';
@@ -10,6 +11,7 @@ function App() {
       <HeroSection />
       <MyWork />
       <Languages/>
+      <Connect/>
     </>
   );
 }
