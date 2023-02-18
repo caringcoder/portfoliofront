@@ -11,6 +11,8 @@ import NodeJsLogo from '../assets/logo/nodeJs.png'
 import CppLogo from '../assets/logo/cplus.png'
 import BootstrapLogo from '../assets/logo/bootstrap.png'
 
+
+
 const techSpam = [
     {
         name: "ReactJsLogo",
@@ -54,6 +56,19 @@ const techSpam = [
     },
 ]
 
+const carouselMediaQuery={
+    0: {
+        items: 2,
+ 
+    },
+    600: {
+        items: 3,
+        nav: false
+    },
+    1000: {
+        items: 5,
+    }
+}
 
 function LangCarousel() {
     return (
@@ -61,7 +76,7 @@ function LangCarousel() {
             <div className="container">
                 <h2 className='text-center m-4 fw-bold'>Tech Stack I'm Comfortable With</h2>
                 <OwlCarousel className='owl-theme' loop margin={2} items={4}
-                  autoplaySpeed={2000} autoplay >
+                    autoplaySpeed={2000} autoplay responsive={carouselMediaQuery} >
                     {
                         techSpam.map((element, index) => {
                             return (

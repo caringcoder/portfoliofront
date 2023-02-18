@@ -17,70 +17,33 @@ const iconsPath = [
         href: "https://www.instagram.com/anxious_me__/?igshid=YmMyMTA2M2Y%3D"
     }
 ]
-const navItems = [
-    {
-        name: 'Home',
-        href: "#"
-    },
-    {
-        name: 'About',
-        href: "#"
-    },
-    {
-        name: 'Services',
-        href: "#"
-    },
-    {
-        name: 'Contact',
-        href: `${window.location.pathname}#contact`
-    },
-]
-
-function Navbar() {
+function Footer() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Aditya</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarText">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <div className="container">
+                <footer className="py-5">
+                    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p>© 2022 All rights reserved.</p>
+                        <ul className="list-unstyled d-flex">
                             {
-                                navItems.map((element, index) => {
+                                iconsPath.map((element, index) => {
                                     return (
-                                        <li className="nav-item" key={index}>
-                                            <a className="nav-link active" aria-current="page" href={element.href} >{element.name}</a>
+                                        <li className="ms-3" key={index}>
+                                            <a className="link-dark" href={element.href}>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="currentColor" className={`bi bi-${element.name}`} viewBox="0 0 16 16">
+                                                    <path d={element.path} />
+                                                </svg>
+                                            </a>
                                         </li>
                                     )
                                 })
                             }
                         </ul>
-                        <div>
-                            <span className="navbar-text">
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    {
-                                        iconsPath.map((element, index) => {
-                                            return (
-                                                <li className="nav-item" key={index}>
-                                                    <a className="nav-link active" aria-current="page" href={element.href} target='_blank'>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="currentColor" className={`bi bi-${element.name}`} viewBox="0 0 16 16">
-                                                            <path d={element.path} />
-                                                        </svg>
-                                                    </a>
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </span>
-                        </div>
                     </div>
-                </div>
-            </nav>
+                </footer>
+            </div>
         </>
     )
 }
 
-export default Navbar
+export default Footer
