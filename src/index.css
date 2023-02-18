@@ -7,3 +7,8 @@
 .para {
   font-family: 'Roboto', sans-serif;
 }
+.owl-carousel .owl-item img {
+  display: block;
+  width: auto !important;
+  margin: auto;
+}

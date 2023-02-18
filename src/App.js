@@ -1,5 +1,6 @@
 import Connect from './components/Connect';
 import HeroSection from './components/HeroSection';
+import LangCarousel from './components/LangCarousel';
 import Languages from './components/Languages';
 import MyWork from './components/MyWork';
 import Navbar from './components/Navbar';
@@ -10,7 +11,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <MyWork />
-      <Languages/>
+      <LangCarousel/>
       <Connect/>
     </>
   );
