@@ -64,14 +64,13 @@ function Navbar() {
                                         iconsPath.map((element, index) => {
                                             return (
                                                 <li className="nav-item" key={index}>
-                                                    <a className="nav-link active" aria-current="page" href={element.href} target='_blank'>
+                                                    <a className="nav-link active" aria-current="page" href={element.href} target='_blank' rel='noreferrer'>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="currentColor" className={`bi bi-${element.name}`} viewBox="0 0 16 16">
                                                             <path d={element.path} />
                                                         </svg>
                                                     </a>
                                                 </li>
-                                            )
-                                        })
+                                            )})
                                     }
                                 </ul>
                             </span>

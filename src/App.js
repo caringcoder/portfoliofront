@@ -6,7 +6,7 @@ import MyWork from './components/MyWork';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 
-function App() {
+function App() { 
   return (
     <>
       <Header />
@@ -14,7 +14,7 @@ function App() {
       <HeroSection />
       <MyWork />
       <LangCarousel />
-      <Connect />
+      <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG} />
       <Footer />
     </>
   );
