@@ -23,7 +23,7 @@ function HeroSection() {
                             <h3 className='text-primary' >Full Stack Developer</h3>
                             <h5>From India</h5>
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                                <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Hire Me</button>
+                                <button type="button" id='' className="btn btn-primary btn-lg px-4 me-md-2 hireButton">Hire Me</button>
                             </div>
                         </div>
                     </div>

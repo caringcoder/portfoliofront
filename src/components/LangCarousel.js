@@ -86,7 +86,8 @@ function LangCarousel() {
                             )
                         })
                     }
-                </OwlCarousel>;
+                </OwlCarousel>
+                <hr />
             </div>
         </>
     )
