@@ -6,7 +6,7 @@ function Connect({ apikey }) {
     const [formData, setFormData] = useState({
         name: '', email: '', message: ''
     })
-    const [formSuccess, setFormSuccess] = useState(null)
+   
     const { name, email, message } = formData
 
 
@@ -14,11 +14,6 @@ function Connect({ apikey }) {
         e.preventDefault()
         console.log(formData)
 
-        setFormSuccess(true)
-
-        setTimeout(() => {
-            setFormSuccess(false)
-        }, 3000);
 
         const body = {
             name: name,

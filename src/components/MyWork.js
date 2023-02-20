@@ -3,6 +3,10 @@ import BtcFarm from '../assets/carouselImages/btcFarm.jpeg'
 import Todo from '../assets/carouselImages/todo.jpeg'
 import responseApp from '../assets/carouselImages/responseApp.jpeg'
 import textUtils from '../assets/carouselImages/textUtils.jpeg'
+import aboutUs from '../assets/carouselImages/aboutUs.jpeg'
+import maccoin from '../assets/carouselImages/maccoin.jpeg'
+import wallet from '../assets/carouselImages/wallet.jpeg'
+import trontry from '../assets/carouselImages/trontry.jpeg'
 
 const porjects = [
     {
@@ -33,6 +37,42 @@ const porjects = [
         techStack: "TechStack Used - ReactJs, Bootstrap",
     },
     {
+        name: "About Us",
+        src: aboutUs,
+        alt: "About Us",
+        href : "#",
+        title : "About Us",
+        desc : "A landing About Us page",
+        techStack : "TechStack Used - HTML5 and CSS3"
+    },
+    {
+        name: "Maccoin",
+        src: maccoin,
+        alt: "Maccoin",
+        href : "#",
+        title : "Template Editing",
+        desc : "Edited the content of this website as per the request",
+        techStack : "TechStack Used - HTML5 and CSS3"
+    },
+    {
+        name: "Trontry",
+        src: trontry,
+        alt: "Trontry",
+        href : "#",
+        title : "Template Editing",
+        desc : "Edited the content of this website as per the request",
+        techStack : "TechStack Used - HTML5 and CSS3"
+    },
+    {
+        name: "Wallet",
+        src: wallet,
+        alt: "Wallet Page",
+        href : "#",
+        title : "Wallet Landing Page",
+        desc : "Created a wallet page as per the request",
+        techStack : "TechStack Used - HTML5 and CSS3"
+    },
+    {
         name: "Response",
         src: responseApp,
         alt: 'Response App',
@@ -40,7 +80,7 @@ const porjects = [
         title: "Response App",
         desc: "A simple response site that takes your response.",
         techStack: "TechStack Used - ReactJs, Bootstrap, MongoDb & Express",
-    },
+    }
 ]
 
 function MyWork() {
@@ -56,7 +96,7 @@ function MyWork() {
                                     <div className="card">
                                         <img src={element.src} className="card-img-top" alt={element.alt} />
                                         <div className="card-body">
-                                            <h5 className="card-title">{element.title}</h5>
+                                            <h5 className="card-title fw-bold">{element.title}</h5>
                                             <p className="card-text">{element.desc}</p>
                                             <p className='card-text'><strong>{element.techStack}</strong></p>
                                             <a href={element.href} target={'_blank'} rel='noreferrer' className="btn btn-primary">Check Out
@@ -69,7 +109,8 @@ function MyWork() {
                                         </div>
                                     </div>
                                 </div>
-                            )})
+                            )
+                        })
                     }
                 </div>
                 <hr />
