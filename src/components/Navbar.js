@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const iconsPath = [
     {
@@ -20,7 +21,7 @@ const iconsPath = [
 const navItems = [
     {
         name: 'Home',
-        href: "#"
+        href: "/"
     },
     {
         name: 'About',
@@ -28,11 +29,11 @@ const navItems = [
     },
     {
         name: 'Services',
-        href: "#"
+        href: "/services"
     },
     {
         name: 'Contact',
-        href: `${window.location.pathname}#contact`
+        href: "/contact"
     },
 ]
 
@@ -41,7 +42,7 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Aditya</a>
+                    <Link className="navbar-brand" to="/">Aditya</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -51,7 +52,7 @@ function Navbar() {
                                 navItems.map((element, index) => {
                                     return (
                                         <li className="nav-item" key={index}>
-                                            <a className="nav-link active" aria-current="page" href={element.href} >{element.name}</a>
+                                            <Link className="nav-link active" aria-current="page" to={element.href} >{element.name}</Link>
                                         </li>
                                     )
                                 })
