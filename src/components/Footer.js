@@ -23,14 +23,14 @@ function Footer() {
             <div className="container">
                 <footer >
                     <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                        <p>© 2022 All rights reserved.</p>
+                        <p>© 2023 All rights reserved.</p>
                         <ul className="list-unstyled d-flex">
                             {
                                 iconsPath.map((element, index) => {
                                     return (
                                         <li className="ms-3" key={index}>
                                             <a className="link-dark" href={element.href}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="currentColor" className={`bi bi-${element.name}`} viewBox="0 0 16 16">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="currentColor" color='white' className={`bi bi-${element.name}`} viewBox="0 0 16 16">
                                                     <path d={element.path} />
                                                 </svg>
                                             </a>

@@ -42,10 +42,10 @@ function Connect({apikey}) {
                 <div className="row align-items-center g-lg-5 py-5">
                     <div className="col-lg-7 text-center text-lg-start">
                         <h1 className="display-4 fw-bold lh-1 mb-3">Connect With Me</h1>
-                        <p className="col-lg-10 fs-4">Hello, To Connect With Me please enter your full name, email and your message to me. I'll reach you as soon as possible.</p>
+                        <p className="col-lg-10 fs-4">Hello, To Connect With me please enter your full name, email and your message to me. I'll reach you as soon as possible.</p>
                     </div>
                     <div className="col-md-10 mx-auto col-lg-5">
-                        <form className="p-4 p-md-5 border rounded-3 bg-light needs-validation" onSubmit={handleSubmit}>
+                        <form className="p-4 p-md-5 border rounded-3 bg-light needs-validation text-dark" onSubmit={handleSubmit}>
                             <div className="form-floating mb-3">
                                 <input type="text" className="form-control" name='name' required value={name} onChange={handleOnChange} />
                                 <label htmlFor="floatingInput">Full Name</label>

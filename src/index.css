@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body {
+  background-image: linear-gradient(to right top, #9c379c, #863e9e, #70439d, #5a469a, #444895, #394592, #2d438f, #1d408c, #1a398d, #1a318e, #1f298d, #251e8c);
+  color: white;
+}
+
+.card-body{
+  color: black;
+}
 .img-fluid {
   max-width: 70%;
 }
@@ -13,4 +21,3 @@
   width: auto !important;
   margin: auto;
 }
-

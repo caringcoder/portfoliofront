@@ -10,10 +10,26 @@ import MongoDbLogo from '../assets/logo/MongoDb.png'
 import NodeJsLogo from '../assets/logo/nodeJs.png'
 import CppLogo from '../assets/logo/cplus.png'
 import BootstrapLogo from '../assets/logo/bootstrap.png'
-
-
+import JavascriptLogo from "../assets/logo/Javascript.png";
+import expressJsLogo from "../assets/logo/expressJs.png";
+import gitLogo from "../assets/logo/git.png";
 
 const techSpam = [
+    {
+        name : "gitLogo",
+        src : gitLogo,
+        alt : "git"
+    },
+    {
+        name : "expressJsLogo",
+        src : expressJsLogo,
+        alt : "expressJs"
+    },
+    {
+        name: "JavascriptLogo",
+        src: JavascriptLogo,
+        alt: "Javascript"
+    },
     {
         name: "ReactJsLogo",
         src: ReactJsLogo,
@@ -56,10 +72,10 @@ const techSpam = [
     },
 ]
 
-const carouselMediaQuery={
+const carouselMediaQuery = {
     0: {
         items: 2,
- 
+
     },
     600: {
         items: 3,
