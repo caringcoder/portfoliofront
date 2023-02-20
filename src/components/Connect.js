@@ -2,16 +2,23 @@ import React, { useState } from 'react'
 import axios from 'axios';
 
 
-function Connect({apikey}) {
+function Connect({ apikey }) {
     const [formData, setFormData] = useState({
         name: '', email: '', message: ''
     })
+    const [formSuccess, setFormSuccess] = useState(null)
     const { name, email, message } = formData
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
+
+        setFormSuccess(true)
+
+        setTimeout(() => {
+            setFormSuccess(false)
+        }, 3000);
 
         const body = {
             name: name,
@@ -25,9 +32,9 @@ function Connect({apikey}) {
             }
         }
 
-        axios.post(apikey,body,config)
-        .then(()=>{console.log('Form Data Submitted To backend')})
-        .catch((err)=>{console.log('Form Data Not Submitted To backend',err)})
+        axios.post('https://portfoliobackend-azure.vercel.app/connectus', body, config)
+            .then(() => { console.log('Form Data Submitted To backend') })
+            .catch((err) => { console.log('Form Data Not Submitted To backend', err) })
     }
 
     const handleOnChange = (e) => {
@@ -45,6 +52,9 @@ function Connect({apikey}) {
                         <p className="col-lg-10 fs-4">Hello, To Connect With me please enter your full name, email and your message to me. I'll reach you as soon as possible.</p>
                     </div>
                     <div className="col-md-10 mx-auto col-lg-5">
+
+
+
                         <form className="p-4 p-md-5 border rounded-3 bg-light needs-validation text-dark" onSubmit={handleSubmit}>
                             <div className="form-floating mb-3">
                                 <input type="text" className="form-control" name='name' required value={name} onChange={handleOnChange} />
