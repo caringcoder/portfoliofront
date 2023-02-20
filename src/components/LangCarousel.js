@@ -14,16 +14,18 @@ import JavascriptLogo from "../assets/logo/Javascript.png";
 import expressJsLogo from "../assets/logo/expressJs.png";
 import gitLogo from "../assets/logo/git.png";
 
+
 const techSpam = [
+   
     {
-        name : "gitLogo",
-        src : gitLogo,
-        alt : "git"
+        name: "gitLogo",
+        src: gitLogo,
+        alt: "git"
     },
     {
-        name : "expressJsLogo",
-        src : expressJsLogo,
-        alt : "expressJs"
+        name: "expressJsLogo",
+        src: expressJsLogo,
+        alt: "expressJs"
     },
     {
         name: "JavascriptLogo",
