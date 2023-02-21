@@ -16,7 +16,7 @@ import gitLogo from "../assets/logo/git.png";
 
 
 const techSpam = [
-   
+
     {
         name: "gitLogo",
         src: gitLogo,
@@ -77,6 +77,7 @@ const techSpam = [
 const carouselMediaQuery = {
     0: {
         items: 2,
+        autoplaySpeed: 1000
 
     },
     600: {
@@ -94,7 +95,7 @@ function LangCarousel() {
             <div className="container">
                 <h2 className='text-center m-4 fw-bold'>Tech Stack I'm Comfortable With</h2>
                 <OwlCarousel className='owl-theme' loop margin={2} items={4}
-                    autoplaySpeed={2000} autoplay responsive={carouselMediaQuery} >
+                    autoplaySpeed={1000} autoplay responsive={carouselMediaQuery} >
                     {
                         techSpam.map((element, index) => {
                             return (

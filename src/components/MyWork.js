@@ -88,7 +88,7 @@ function MyWork() {
         <>
             <div className="container mx-auto">
                 <h1 className='text-center m-2'>What I've Made</h1>
-                <div className="row me-auto">
+                <div className="row mx-auto">
                     {
                         porjects.map((element, index) => {
                             return (

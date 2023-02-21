@@ -115,3 +115,7 @@ body {
     border-left: 5px solid #fc5356;
     padding-left: 15px;
 }
+
+.gutterPadding{
+  --bs-gutter-y: 3rem;
+}

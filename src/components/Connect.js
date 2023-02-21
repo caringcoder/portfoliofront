@@ -22,6 +22,11 @@ function Connect({ apikey }) {
             message: message
         }
 
+        //Clearing the input value after post
+        setFormData({
+            name: '', email: '', message: ''
+        })
+
         const config = {
             headers: {
                 'Content-Type': 'application/json'
@@ -29,8 +34,8 @@ function Connect({ apikey }) {
         }
 
         axios.post('https://portfoliobackend-azure.vercel.app/connectus', body, config)
-            // .then(() => { console.log('Form Data Submitted To backend') })
-            // .catch((err) => { console.log('Form Data Not Submitted To backend', err) })
+            .then(() => {console.log('Form Data Submitted To backend')})
+        // .catch((err) => { console.log('Form Data Not Submitted To backend', err) })
     }
 
     const handleOnChange = (e) => {
@@ -42,7 +47,7 @@ function Connect({ apikey }) {
     return (
         <>
             <div className="container col-xl-10 col-xxl-8 px-4 py-5">
-                
+
                 <div className="row align-items-center g-lg-5 py-5">
                     <div className="col-lg-7 text-center text-lg-start">
                         <h1 className="display-4 fw-bold lh-1 mb-3">Connect With Me</h1>
@@ -54,7 +59,7 @@ function Connect({ apikey }) {
                                 <input type="text" className="form-control" name='name' required value={name} onChange={handleOnChange} />
                                 <label htmlFor="floatingInput">Full Name</label>
                             </div>
-                            
+
                             <div className="form-floating mb-3">
                                 <input type="email" className="form-control" name='email' required value={email
                                 } onChange={handleOnChange} />
@@ -80,7 +85,7 @@ function Connect({ apikey }) {
                                     </div>
                             }
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
