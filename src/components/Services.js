@@ -41,7 +41,7 @@ function Services() {
             <div className="col-lg-6">
               <div className="section-title">
                 <h2 className='text-light'>What I Do</h2>
-                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites</p>
+                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites including fullstack applications.</p>
               </div>
             </div>
           </div>
