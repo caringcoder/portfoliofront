@@ -9,11 +9,10 @@ import MyWork from './components/MyWork';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Services from './components/Services';
-// import Contact from './components/Contact';
 
 function App() {
-  // const [progress, setProgress] = useState(0)
   
+
   return (
     <>
       <Router>
@@ -29,7 +28,7 @@ function App() {
             </>
           } />
           <Route path='/contact' element={
-            <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG} />
+            <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG}  />
           } />
 
           <Route path='/services' element={
