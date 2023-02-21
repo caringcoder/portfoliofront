@@ -12,7 +12,7 @@ function HeroSection() {
                             <img src={HeroImg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
                         </div>
                         <div className="col-lg-6">
-                            <p className="display-5 lh-1 mb-3 para">Hello,</p>
+                            <p className="display-5 lh-1 mb-3 para ">Hello,</p>
                             <h1 ><Typewriter
                                 options={{
                                     strings: [`I'm Aditya Raj Chauhan`],
