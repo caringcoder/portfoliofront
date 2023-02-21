@@ -4,6 +4,4 @@
 
 # About Section to be Added
 
-# Connect Form After Effect
-
 # Top Loading Bar

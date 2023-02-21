@@ -22,7 +22,7 @@ function Footer() {
         <>
             <div className="container">
                 <footer  className='footer'>
-                    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <div className="d-flex flex-sm-row justify-content-between py-4 my-4 border-top">
                         <p>© 2023 All rights reserved.</p>
                         <ul className="list-unstyled d-flex">
                             {

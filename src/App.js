@@ -11,8 +11,6 @@ import Header from './components/Header';
 import Services from './components/Services';
 
 function App() {
-  
-
   return (
     <>
       <Router>
@@ -34,8 +32,6 @@ function App() {
           <Route path='/services' element={
             <Services />
           } />
-
-
         </Routes>
         <Footer />
       </Router>
