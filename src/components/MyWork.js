@@ -40,7 +40,7 @@ const porjects = [
         name: "About Us",
         src: aboutUs,
         alt: "About Us",
-        href : "#",
+        href : "https://lunchmoney.io/about-us.html",
         title : "About Us",
         desc : "A landing About Us page",
         techStack : "TechStack Used - HTML5 and CSS3"
