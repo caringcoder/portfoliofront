@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import navLogo from '../assets/logo/adidevx.png'
 
 const iconsPath = [
     {
@@ -42,7 +43,9 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <Link className="navbar-brand fw-600" to="/">Aditya</Link>
+                    <Link class="navbar-brand" to="/">
+                        <img src={navLogo}alt="AdityaDev" width="inherit" height="24"/>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -71,7 +74,8 @@ function Navbar() {
                                                         </svg>
                                                     </a>
                                                 </li>
-                                            )})
+                                            )
+                                        })
                                     }
                                 </ul>
                             </span>
