@@ -7,6 +7,7 @@ import aboutUs from '../assets/carouselImages/aboutUs.jpeg'
 import maccoin from '../assets/carouselImages/maccoin.jpeg'
 import wallet from '../assets/carouselImages/wallet.jpeg'
 import trontry from '../assets/carouselImages/trontry.jpeg'
+import leaderboard from '../assets/carouselImages/leaderboard.jpeg'
 
 const porjects = [
     {
@@ -33,7 +34,7 @@ const porjects = [
         alt: 'TextUtils',
         href: "https://textutils-b9k4w4zc6-caringcoder.vercel.app/",
         title: "TextUtils",
-        desc: "A simple Todo App that keeps your todo list.",
+        desc: "A simple text-utility based site.",
         techStack: "TechStack Used - ReactJs, Bootstrap",
     },
     {
@@ -41,7 +42,7 @@ const porjects = [
         src: aboutUs,
         alt: "About Us",
         href : "https://lunchmoney.io/about-us.html",
-        title : "About Us",
+        title : "About Us (Landing Page)",
         desc : "A landing About Us page",
         techStack : "TechStack Used - HTML5 and CSS3"
     },
@@ -49,7 +50,7 @@ const porjects = [
         name: "Maccoin",
         src: maccoin,
         alt: "Maccoin",
-        href : "#",
+        href : "https://maccoin.vercel.app/",
         title : "Template Editing",
         desc : "Edited the content of this website as per the request",
         techStack : "TechStack Used - HTML5 and CSS3"
@@ -67,9 +68,18 @@ const porjects = [
         name: "Wallet",
         src: wallet,
         alt: "Wallet Page",
-        href : "#",
-        title : "Wallet Landing Page",
+        href : "https://wallet-two-nu.vercel.app/",
+        title : "Wallet (Landing Page)",
         desc : "Created a wallet page as per the request",
+        techStack : "TechStack Used - HTML5 and CSS3"
+    },
+    {
+        name: "Leaderboard",
+        src: leaderboard,
+        alt: "LeaderBoard Page",
+        href : "https://leaderboard-woad.vercel.app/",
+        title : "Leaderboard (Landing Page)",
+        desc : "Created a leaderboard page as per the request",
         techStack : "TechStack Used - HTML5 and CSS3"
     },
     {
