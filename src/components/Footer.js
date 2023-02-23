@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const iconsPath = [
     {
@@ -18,10 +18,36 @@ const iconsPath = [
     }
 ]
 function Footer() {
+    const [ip, setIp] = useState([])
+
+    const fetchData = async () => {
+        const response = await fetch('https://portfoliobackend-azure.vercel.app/visitor')
+        const data = await response.json()
+        setIp([data])
+        // console.log(data)
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+
     return (
         <>
             <div className="container">
-                <footer  className='footer'>
+                {
+                    ip.map((element) => {
+                        return (
+                            <p className='m-0  d-flex justify-content-end' key={element._id} style={{ color: 'white' }}>
+                            {` Your Ip : ${element.visitorIp} `}
+                            </p>
+                        )
+                    })
+                }
+
+            </div>
+            <div className="container">
+                <footer className='footer'>
                     <div className="d-flex flex-sm-row justify-content-between border-top">
                         <p>© 2023 All rights reserved.</p>
                         <ul className="list-unstyled d-flex">

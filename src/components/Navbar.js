@@ -43,7 +43,7 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <Link class="navbar-brand" to="/">
+                    <Link className="navbar-brand" to="/">
                         <img src={navLogo}alt="AdityaDev" width="inherit" height="24"/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
