@@ -36,11 +36,13 @@ function Footer() {
         <>
             <div className="container">
                 {
-                    ip.map((element) => {
+                    ip.map((element,index) => {
                         return (
-                            <p className='m-0  d-flex justify-content-end' key={element._id} style={{ color: 'white' }}>
-                            {` Your Ip : ${element.visitorIp} `}
-                            </p>
+                            <div className='container' key={index}>
+                                <span className='m-0  d-flex justify-content-end'  style={{ color: 'white' }}>
+                                    {` Your Ip : ${element.uniqueVisit.visitorIp} `}
+                                </span>
+                            </div>
                         )
                     })
                 }

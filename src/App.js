@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // import LoadingBar from 'react-top-loading-bar'
 import Connect from './components/Connect';
@@ -12,10 +12,22 @@ import Services from './components/Services';
 
 function App() {
 
+  const [alert, setAlert] = useState(true)
+  const showAlertMsg = () => {
+    setTimeout(() => {
+      setAlert(null)
+    }, 5000);
+  }
+
+  useEffect(() => {
+    showAlertMsg();
+  }, [])
+
+
   return (
     <>
       <Router>
-        <Header />
+        <Header alert={alert} />
         <Navbar />
         <Routes>
           <Route path='/' element={
@@ -27,7 +39,7 @@ function App() {
             </>
           } />
           <Route path='/contact' element={
-            <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG}  />
+            <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG} />
           } />
 
           <Route path='/services' element={
