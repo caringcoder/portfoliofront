@@ -18,24 +18,10 @@ const iconsPath = [
     }
 ]
 function Footer() {
-    const [ip, setIp] = useState([])
-
-    const fetchData = async () => {
-        const response = await fetch('https://portfoliobackend-azure.vercel.app/visitor')
-        const data = await response.json()
-        setIp([data])
-        // console.log(data)
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
-
-
     return (
         <>
             <div className="container">
-                {
+                {/* {
                     ip.map((element,index) => {
                         return (
                             <div className='container' key={index}>
@@ -45,7 +31,7 @@ function Footer() {
                             </div>
                         )
                     })
-                }
+                } */}
 
             </div>
             <div className="container">
