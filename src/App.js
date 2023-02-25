@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Services from './components/Services';
 import Visitor from './components/Visitor';
 
+
 function App() {
 
   const [alert, setAlert] = useState(true)
@@ -37,7 +38,7 @@ function App() {
               <MyWork />
               <LangCarousel />
               <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG} />
-              <Visitor/>
+              <Visitor />
             </>
           } />
           <Route path='/contact' element={

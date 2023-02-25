@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+
 
 const iconsPath = [
     {
@@ -20,20 +20,6 @@ const iconsPath = [
 function Footer() {
     return (
         <>
-            <div className="container">
-                {/* {
-                    ip.map((element,index) => {
-                        return (
-                            <div className='container' key={index}>
-                                <span className='m-0  d-flex justify-content-end'  style={{ color: 'white' }}>
-                                    {` Your Ip : ${element.uniqueVisit.visitorIp} `}
-                                </span>
-                            </div>
-                        )
-                    })
-                } */}
-
-            </div>
             <div className="container">
                 <footer className='footer'>
                     <div className="d-flex flex-sm-row justify-content-between border-top">

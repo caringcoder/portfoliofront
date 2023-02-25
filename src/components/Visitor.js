@@ -2,40 +2,24 @@ import React, { useState, useEffect } from 'react'
 
 function Visitor() {
 
-    const [resData, setResData] = useState({})
-    const [currentIp, setCurrentIp] = useState('')
-    const [uniqueVisitor, setUniqueVisitor] = useState('')
+    const [storedData, setStoredData] = useState({
+        currentIp: '', totalVisit: '', unqiueVist: ''
+    })
 
     const fetchData = async () => {
         const response = await fetch('https://portfoliobackend-azure.vercel.app/visitor')
         const data = await response.json()
-        setResData(data.visitorList)
-        // console.log(resData)
+        // console.log(data)
 
-        const list = data.visitorList
-
-        //Getting the list of ip address
-        const x = Array.from(list).map((element) => {
-            return element.visitorIp
+        setStoredData({
+            currentIp: data.currentIp,
+            totalVisit: (data.visitorList.totalVisits),
+            unqiueVist: (data.visitorList.totalUniqueVisits),
         })
-        // console.log(x)
-
-        // Finding unique ip address
-        const unique = x.reduce(function (acc, curr) {
-            if (!acc.includes(curr))
-                acc.push(curr);
-            return acc;
-        }, []);
-        // console.log(unique)
-        setUniqueVisitor(unique.length)
-        // console.log(uniqueVisitor)
-
-        setCurrentIp(data.uniqueVisit.visitorIp)
-        // console.log(currentIp)
-
-        // console.log(resData.length)
+        // console.log(storedData)
     }
 
+    const { currentIp, unqiueVist, totalVisit } = storedData
     useEffect(() => {
         fetchData()
     }, [])
@@ -45,15 +29,15 @@ function Visitor() {
             <div className="container ">
                 <div className="row ">
                     <div className="col-md-4 text-center">
-                        <h2 className="">{resData.length}</h2>
+                        <h2>{totalVisit}</h2>
                         <p className="leading-relaxed">Total Visits</p>
                     </div>
                     <div className="col-md-4 text-center">
-                        <h2 className="">{uniqueVisitor}</h2>
+                        <h2 >{unqiueVist}</h2>
                         <p className="leading-relaxed">Unique Visitors</p>
                     </div>
                     <div className="col-md-4 text-center">
-                        <h2 className="">{currentIp}</h2>
+                        <h2 >{currentIp}</h2>
                         <p className="leading-relaxed">Your Ip</p>
                     </div>
                 </div>
