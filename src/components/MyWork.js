@@ -1,4 +1,7 @@
 import React from 'react'
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import BtcFarm from '../assets/carouselImages/btcFarm.jpeg'
 import Todo from '../assets/carouselImages/todo.jpeg'
 import responseApp from '../assets/carouselImages/responseApp.jpeg'
@@ -41,46 +44,46 @@ const porjects = [
         name: "About Us",
         src: aboutUs,
         alt: "About Us",
-        href : "https://lunchmoney.io/about-us.html",
-        title : "About Us (Landing Page)",
-        desc : "A landing About Us page",
-        techStack : "TechStack Used - HTML5 and CSS3"
+        href: "https://lunchmoney.io/about-us.html",
+        title: "About Us (Landing Page)",
+        desc: "A landing About Us page",
+        techStack: "TechStack Used - HTML5 and CSS3"
     },
     {
         name: "Maccoin",
         src: maccoin,
         alt: "Maccoin",
-        href : "https://maccoin.vercel.app/",
-        title : "Template Editing",
-        desc : "Edited the content of this website as per the request",
-        techStack : "TechStack Used - HTML5 and CSS3"
+        href: "https://maccoin.vercel.app/",
+        title: "Template Editing",
+        desc: "Edited the content of this website as per the request",
+        techStack: "TechStack Used - HTML5 and CSS3"
     },
     {
         name: "Trontry",
         src: trontry,
         alt: "Trontry",
-        href : "#",
-        title : "Template Editing",
-        desc : "Edited the content of this website as per the request",
-        techStack : "TechStack Used - HTML5 and CSS3"
+        href: "#",
+        title: "Template Editing",
+        desc: "Edited the content of this website as per the request",
+        techStack: "TechStack Used - HTML5 and CSS3"
     },
     {
         name: "Wallet",
         src: wallet,
         alt: "Wallet Page",
-        href : "https://wallet-two-nu.vercel.app/",
-        title : "Wallet (Landing Page)",
-        desc : "Created a wallet page as per the request",
-        techStack : "TechStack Used - HTML5 and CSS3"
+        href: "https://wallet-two-nu.vercel.app/",
+        title: "Wallet (Landing Page)",
+        desc: "Created a wallet page as per the request",
+        techStack: "TechStack Used - HTML5 and CSS3"
     },
     {
         name: "Leaderboard",
         src: leaderboard,
         alt: "LeaderBoard Page",
-        href : "https://leaderboard-woad.vercel.app/",
-        title : "Leaderboard (Landing Page)",
-        desc : "Created a leaderboard page as per the request",
-        techStack : "TechStack Used - HTML5 and CSS3"
+        href: "https://leaderboard-woad.vercel.app/",
+        title: "Leaderboard (Landing Page)",
+        desc: "Created a leaderboard page as per the request",
+        techStack: "TechStack Used - HTML5 and CSS3"
     },
     {
         name: "Response",
@@ -92,6 +95,20 @@ const porjects = [
         techStack: "TechStack Used - ReactJs, Bootstrap, MongoDb & Express",
     }
 ]
+const carouselMediaQuery = {
+    0: {
+        items: 1,
+        autoplaySpeed: 1000
+
+    },
+    600: {
+        items: 2,
+        nav: false
+    },
+    1000: {
+        items: 2,
+    }
+}
 
 function MyWork() {
     return (
@@ -123,6 +140,36 @@ function MyWork() {
                         })
                     }
                 </div>
+
+                {/* <OwlCarousel loop items={2}>
+                    <div className="row mx-auto myWorkRow">
+                        {
+                            porjects.map((element, index) => {
+                                return (
+                                    <div className="item">
+                                        <div className="col-sm-12 my-2" key={index}>
+                                            <div className="card">
+                                                <img src={element.src} className="card-img-top" alt={element.alt} style={{width:'none !inpo'}}/>
+                                                <div className="card-body">
+                                                    <h5 className="card-title fw-bold">{element.title}</h5>
+                                                    <p className="card-text">{element.desc}</p>
+                                                    <p className='card-text'><strong>{element.techStack}</strong></p>
+                                                    <a href={element.href} target={'_blank'} rel='noreferrer' className="btn btn-primary">Check Out
+                                                        <span className='align-items-center mx-2'>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                                                <path fillRule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z" />
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </OwlCarousel> */}
                 <hr />
             </div>
         </>

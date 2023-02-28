@@ -7,7 +7,7 @@ function Header({alert}) {
               alert &&
                 <header>
                     <div className="container my-1">
-                        <span className="alert" role="alert">
+                        <span className="alert alertFontSize" role="alert">
                             The website is currently under development.
                         </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-code-slash mx-3" viewBox="0 0 16 16">

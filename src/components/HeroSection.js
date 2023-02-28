@@ -1,5 +1,6 @@
 import React from 'react'
-import HeroImg from '../assets/HeroImg.png'
+// import HeroImg from '../assets/HeroImg.png'
+import Astro from '../assets/astro.png'
 import Typewriter from 'typewriter-effect';
 
 function HeroSection() {
@@ -7,9 +8,9 @@ function HeroSection() {
         <>
             <main>
                 <div className="container h-25">
-                    <div className="row flex-lg-row-reverse align-items-center gutterPadding py-5">
-                        <div className="col-10 col-sm-8 col-lg-6">
-                            <img src={HeroImg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
+                    <div className="row flex-lg-row-reverse align-items-center gutterPadding py-5 ">
+                        <div className="col-10 col-sm-8 col-lg-6 heroLogoDiv">
+                            <img src={Astro} className="d-block mx-lg-auto img-fluid heroLogoImg" alt="Bootstrap Themes" width="700" height="600" loading="lazy" />
                         </div>
                         <div className="col-lg-6">
                             <p className="display-5 lh-1 mb-3 para ">Hello,</p>

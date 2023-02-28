@@ -134,3 +134,32 @@ body {
 .gutterPadding {
   --bs-gutter-y: 3rem;
 }
+.cardImg owl-carousel owl-item img {
+  display: block;
+  /* width: auto !important; */
+  margin: auto;
+}
+
+.myWorkRow{
+  flex-wrap: nowrap;
+  /* overflow-x: auto; */
+}
+.myWorkRow::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media(max-width: 426px) {
+  .heroLogoImg {
+    max-width: inherit;
+  }
+
+  .heroLogoDiv {
+    width: auto;
+  }
+
+  .alertFontSize {
+    font-size: 0.80rem;
+    --bs-alert-padding-x: none;
+  }
+}
