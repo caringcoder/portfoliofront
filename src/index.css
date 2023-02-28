@@ -134,19 +134,22 @@ body {
 .gutterPadding {
   --bs-gutter-y: 3rem;
 }
+
 .cardImg owl-carousel owl-item img {
   display: block;
   /* width: auto !important; */
   margin: auto;
 }
 
-.myWorkRow{
+.myWorkRow {
   flex-wrap: nowrap;
   /* overflow-x: auto; */
 }
+
 .myWorkRow::-webkit-scrollbar {
   display: none;
 }
+
 
 
 @media(max-width: 426px) {
@@ -162,4 +165,10 @@ body {
     font-size: 0.80rem;
     --bs-alert-padding-x: none;
   }
+}
+
+.card-img-top {
+  display: block !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }

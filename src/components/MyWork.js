@@ -98,12 +98,9 @@ const porjects = [
 const carouselMediaQuery = {
     0: {
         items: 1,
-        autoplaySpeed: 1000
-
     },
     600: {
         items: 2,
-        nav: false
     },
     1000: {
         items: 2,
@@ -113,9 +110,9 @@ const carouselMediaQuery = {
 function MyWork() {
     return (
         <>
-            <div className="container mx-auto">
+            <div className="container">
                 <h1 className='text-center m-2'>What I've Made</h1>
-                <div className="row mx-auto">
+                {/* <div className="row mx-auto">
                     {
                         porjects.map((element, index) => {
                             return (
@@ -139,17 +136,17 @@ function MyWork() {
                             )
                         })
                     }
-                </div>
-
-                {/* <OwlCarousel loop items={2}>
-                    <div className="row mx-auto myWorkRow">
+                </div> */}
+                {
+                    <OwlCarousel className='owl-theme' loop margin={2} items={4}
+                    autoplaySpeed={1000} autoplay responsive={carouselMediaQuery} >
                         {
                             porjects.map((element, index) => {
                                 return (
-                                    <div className="item">
-                                        <div className="col-sm-12 my-2" key={index}>
-                                            <div className="card">
-                                                <img src={element.src} className="card-img-top" alt={element.alt} style={{width:'none !inpo'}}/>
+                                    <div className="item" key={index}>
+                                        <div className="col-sm-12 my-2">
+                                            <div className="card mx-1">
+                                                <img src={element.src} className="card-img-top" alt={element.alt}  />
                                                 <div className="card-body">
                                                     <h5 className="card-title fw-bold">{element.title}</h5>
                                                     <p className="card-text">{element.desc}</p>
@@ -168,8 +165,7 @@ function MyWork() {
                                 )
                             })
                         }
-                    </div>
-                </OwlCarousel> */}
+                    </OwlCarousel>}
                 <hr />
             </div>
         </>
