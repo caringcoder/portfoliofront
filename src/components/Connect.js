@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 
 
-function Connect({ apikey }) {
+function Connect() {
     const [formData, setFormData] = useState({
         name: '', email: '', message: ''
     })
@@ -34,7 +34,7 @@ function Connect({ apikey }) {
         }
 
         axios.post('https://portfoliobackend-azure.vercel.app/connectus', body, config)
-            .then(() => {console.log('Form Data Submitted To backend')})
+            // .then(() => {console.log('Form Data Submitted To backend')})
         // .catch((err) => { console.log('Form Data Not Submitted To backend', err) })
     }
 

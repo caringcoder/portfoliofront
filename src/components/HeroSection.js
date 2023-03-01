@@ -22,7 +22,7 @@ function HeroSection({imgContent}) {
                             <h3 className='text-primary' >Full Stack Developer</h3>
                             <h5>From India</h5>
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a className="btn btn-primary btn-lg" href="https://www.linkedin.com/in/aditya-raj-chauhan-689038220/" target={'_blank'} rel={'noreferrer'} role="button">Hire Me</a>
+                            <a className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" href="https://www.linkedin.com/in/aditya-raj-chauhan-689038220/" target={'_blank'} rel={'noreferrer'} role="button">Hire Me</a>
                             </div>
                         </div>
                     </div>
