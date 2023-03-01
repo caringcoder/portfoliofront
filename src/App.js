@@ -10,6 +10,8 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Services from './components/Services';
 import Visitor from './components/Visitor';
+import Astro from '../src/assets/astro.png'
+import AstroWithLaptop from '../src/assets/astrowithlaptop.png'
 
 
 function App() {
@@ -34,11 +36,16 @@ function App() {
         <Routes>
           <Route path='/' element={
             <>
-              <HeroSection />
+              <HeroSection imgContent={Astro} />
               <MyWork />
               <LangCarousel />
               <Connect apikey={process.env.REACT_APP_POST_CONNECT_MSG} />
               <Visitor />
+            </>
+          } />
+          <Route path='/about' element={
+            <>
+              <HeroSection imgContent={AstroWithLaptop}/>
             </>
           } />
           <Route path='/contact' element={

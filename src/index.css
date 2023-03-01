@@ -5,6 +5,10 @@ body {
   color: white;
 }
 
+.nav-link {
+  font-weight: 600;
+}
+
 .card-body {
   color: black;
 }
@@ -150,8 +154,6 @@ body {
   display: none;
 }
 
-
-
 @media(max-width: 426px) {
   .heroLogoImg {
     max-width: inherit;
@@ -171,4 +173,11 @@ body {
   display: block !important;
   max-width: 100% !important;
   max-height: 100% !important;
+}
+
+@media (max-width: 992px) {
+  .responsiveIcon {
+    flex-direction: initial;
+    gap: 2rem;
+  }
 }
