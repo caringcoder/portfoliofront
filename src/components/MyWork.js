@@ -103,7 +103,7 @@ const carouselMediaQuery = {
         items: 2,
     },
     1000: {
-        items: 2,
+        items: 3,
     }
 }
 
@@ -111,7 +111,7 @@ function MyWork() {
     return (
         <>
             <div className="container">
-                <h1 className='text-center m-2'>What I've Made</h1>
+                <h1 className='text-center m-2'>Projects I've Worked On</h1>
                 {/* <div className="row mx-auto">
                     {
                         porjects.map((element, index) => {

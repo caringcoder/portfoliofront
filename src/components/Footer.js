@@ -21,7 +21,7 @@ function Footer() {
     return (
         <>
             <div className="container">
-                <footer className='footer'>
+                <footer className='footer mt-auto py-2'>
                     <div className="d-flex flex-sm-row justify-content-between border-top">
                         <p>© 2023 All rights reserved.</p>
                         <ul className="list-unstyled d-flex">
