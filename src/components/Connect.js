@@ -1,47 +1,15 @@
-import React, { useState } from 'react'
-import axios from 'axios';
+import React, {useContext } from 'react'
+import formContext from '../context/form/formContext';
 
 
 function Connect() {
-    const [formData, setFormData] = useState({
-        name: '', email: '', message: ''
-    })
-    const [formSuccessMsg, setFormSuccessMsg] = useState(false)
-
-    const { name, email, message } = formData
-
-
+   
+    const values = useContext(formContext)
+    const {formData,formSuccessMsg,submitForm,handleOnChange} = values
+    
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log(formData)
-
-        setFormSuccessMsg(true)
-        const body = {
-            name: name,
-            email: email,
-            message: message
-        }
-
-        //Clearing the input value after post
-        setFormData({
-            name: '', email: '', message: ''
-        })
-
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }
-
-        axios.post('https://portfoliobackend-azure.vercel.app/connectus', body, config)
-            // .then(() => {console.log('Form Data Submitted To backend')})
-        // .catch((err) => { console.log('Form Data Not Submitted To backend', err) })
-    }
-
-    const handleOnChange = (e) => {
-        setFormData({
-            ...formData, [e.target.name]: e.target.value
-        })
+        submitForm()
     }
 
     return (
@@ -56,18 +24,17 @@ function Connect() {
                     <div className="col-md-10 mx-auto col-lg-5">
                         <form className="p-4 p-md-5 border rounded-3 bg-light needs-validation text-dark" onSubmit={handleSubmit}>
                             <div className="form-floating mb-3">
-                                <input type="text" className="form-control" name='name' required value={name} onChange={handleOnChange} />
+                                <input type="text" className="form-control" name='name' required value={formData.name} onChange={handleOnChange} />
                                 <label htmlFor="floatingInput">Full Name</label>
                             </div>
 
                             <div className="form-floating mb-3">
-                                <input type="email" className="form-control" name='email' required value={email
-                                } onChange={handleOnChange} />
+                                <input type="email" className="form-control" name='email' required value={formData.email} onChange={handleOnChange} />
                                 <label htmlFor="floatingPassword" >Email</label>
                             </div>
                             <div className="form-floating mb-3">
                                 <textarea className="form-control" rows="3" name='message' required
-                                    onChange={handleOnChange} value={message}
+                                    onChange={handleOnChange} value={formData.message}
                                 ></textarea>
                                 <label htmlFor="floatingTextarea" >Comments</label>
                             </div>

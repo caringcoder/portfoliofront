@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // import LoadingBar from 'react-top-loading-bar'
 import Connect from './components/Connect';
@@ -12,26 +12,17 @@ import Services from './components/Services';
 import Visitor from './components/Visitor';
 import Astro from '../src/assets/astro.png'
 import About from './components/About';
+import AlertState from './context/alert/AlertState';
+import FormState from '../src/context/form/FormState'
 
 
 function App() {
-
-  const [alert, setAlert] = useState(true)
-  const showAlertMsg = () => {
-    setTimeout(() => {
-      setAlert(null)
-    }, 5000);
-  }
-
-  useEffect(() => {
-    showAlertMsg();
-  }, [])
-
-
   return (
     <>
       <Router>
-        <Header alert={alert} />
+        <AlertState>
+          <Header />
+        </AlertState>
         <Navbar />
         <Routes>
           <Route path='/' element={
@@ -39,13 +30,17 @@ function App() {
               <HeroSection imgContent={Astro} />
               <MyWork />
               <LangCarousel />
-              <Connect  />
+              <FormState>
+                <Connect />
+              </FormState>
               <Visitor />
             </>
           } />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={
-            <Connect />
+            <FormState>
+              <Connect/>
+            </FormState>
           } />
 
           <Route path='/services' element={

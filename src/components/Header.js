@@ -1,6 +1,16 @@
-import React from 'react'
+import React,{useContext,useEffect} from 'react'
+import alertConext from '../context/alert/alertContext'
 
-function Header({alert}) {
+function Header() {
+
+    const value = useContext(alertConext)
+    const {alert,hideAlert} = value;
+
+    useEffect(() => {
+    hideAlert();
+    }, [])
+    
+
     return (
         <>
             {
