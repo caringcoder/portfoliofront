@@ -13,10 +13,21 @@ import BootstrapLogo from '../assets/logo/bootstrap.png'
 import JavascriptLogo from "../assets/logo/Javascript.png";
 import expressJsLogo from "../assets/logo/expressJs.png";
 import gitLogo from "../assets/logo/git.png";
+import tailwindLogo from '../assets/logo/tailwind.png'
+import nextjsLogo from '../assets/logo/nextjs.png'
 
 
 const techSpam = [
-
+    {
+        name :'tailwind',
+        src: tailwindLogo,
+        alt : "tailwind"
+    },
+    {
+        name : "NextJs",
+        src: nextjsLogo,
+        alt : 'NextJs'
+    },
     {
         name: "gitLogo",
         src: gitLogo,
